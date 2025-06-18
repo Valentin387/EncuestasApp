@@ -12,7 +12,7 @@ import retrofit2.http.*
 
 interface SurveyService {
 
-    @GET("api/surveys/{id}")
+    @GET("public/surveys/{id}")
     suspend fun getSurvey(@Path("id") id: String): Response<SurveyDto>
 
     @POST("public/surveys/{id}/response")

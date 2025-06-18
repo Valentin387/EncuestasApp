@@ -1,5 +1,6 @@
 package com.kata3.encuestasapp.ui.main.details
 
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -24,6 +25,7 @@ class DetailsViewModel(private val surveyRepository: SurveyRepository) : ViewMod
     fun fetchSurveyDetails(token: String, surveyId: String) {
         viewModelScope.launch(Dispatchers.IO) {
             try {
+                Log.d("DetailsViewModel", "Fetching survey details for ID: $surveyId")
                 val survey = surveyRepository.getSurvey(surveyId)
                 _survey.postValue(survey)
                 val responses = surveyRepository.getSurveyResponses(token, surveyId)
