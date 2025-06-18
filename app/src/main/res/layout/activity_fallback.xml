@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Survey ID"
+        android:textSize="24sp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="24dp"/>
+
+    <EditText
+        android:id="@+id/et_survey_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Survey ID"
+        android:inputType="text"
+        android:layout_marginBottom="24dp"/>
+
+    <Button
+        android:id="@+id/bt_submit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Open Survey"
+        android:layout_gravity="center_horizontal"/>
+
+</LinearLayout>
