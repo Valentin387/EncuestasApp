@@ -42,7 +42,7 @@
                 <data
                     android:scheme="myapp"
                     android:host="survey"
-                    android:pathPrefix="/{surveyId}" />
+                    android:pathPattern="/.*" />
             </intent-filter>
         </activity>
         <activity
