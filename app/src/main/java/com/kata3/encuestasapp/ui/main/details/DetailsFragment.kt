@@ -14,6 +14,7 @@ import com.kata3.encuestasapp.R
 import com.kata3.encuestasapp.data.repositories.SurveyRepository
 import com.kata3.encuestasapp.databinding.FragmentDetailsBinding
 import com.kata3.encuestasapp.io.SurveyService
+import com.kata3.encuestasapp.ui.response.models.Question
 import com.kata3.encuestasapp.ui.response.models.ResponseDto
 import com.kata3.encuestasapp.ui.response.models.SurveyDto
 import com.kata3.encuestasapp.utils.EncryptedPrefsManager
@@ -100,7 +101,7 @@ class DetailsFragment : Fragment() {
         }
     }
 
-    private fun renderQuestions(questions: List<SurveyDto.Question>) {
+    private fun renderQuestions(questions: List<Question>) {
         binding.llQuestions.removeAllViews()
         questions.forEachIndexed { index, question ->
             val questionText = TextView(context).apply {
