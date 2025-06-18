@@ -24,3 +24,25 @@
             android:id="@+id/action_companySurveysFragment_to_detailsFragment"
             app:destination="@id/nav_details" />
     </fragment>
+
+    <fragment
+        android:id="@+id/nav_create_survey"
+        android:name="com.kata3.encuestasapp.ui.main.createsurvey.CreateSurveyFragment"
+        android:label="Create Survey">
+        <action
+            android:id="@+id/action_createSurveyFragment_to_mySurveysFragment"
+            app:destination="@id/nav_my_surveys"
+            app:popUpTo="@id/nav_my_surveys"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_details"
+        android:name="com.kata3.encuestasapp.ui.main.details.DetailsFragment"
+        android:label="Survey Details">
+        <argument
+            android:name="surveyId"
+            app:argType="string" />
+    </fragment>
+
+</navigation>
