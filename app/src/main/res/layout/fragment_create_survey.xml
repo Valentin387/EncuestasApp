@@ -43,7 +43,7 @@
         android:id="@+id/sp_question_type"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:entries="@arrays/question_types"
+        android:entries="@array/question_types"
         android:layout_marginBottom="16dp"/>
 
     <CheckBox
